@@ -391,3 +391,6 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/oneplus/sm8350-common/sm8350-common-vendor.mk)
 #Sign Keys
 -include vendor/lineage-priv/keys/keys.mk
+
+#BCR
+$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
