@@ -26,6 +26,9 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# Camera
+$(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -390,4 +393,4 @@ $(call inherit-product, vendor/oneplus/sm8350-common/sm8350-common-vendor.mk)
 -include vendor/lineage-priv/keys/keys.mk
 
 #BCR
-$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
+$(call inherit-product, vendor/bcr/bcr.mk)
